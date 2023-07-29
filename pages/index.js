@@ -65,10 +65,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to staking app!</h1>
+        <h1 className={styles.title}>NFTEarth Staking Rewards</h1>
 
         <p className={styles.description}>
-          Stake certain amount and get reward tokens back!
+          Stake NFTE, Earn ARB!
         </p>
 
         <div className={styles.connect}>
@@ -98,7 +98,7 @@ export default function Home() {
               alert("Tokens staked successfully!");
             }}
           >
-            Stake!
+            Stake
           </Web3Button>
 
           <Web3Button
@@ -112,7 +112,7 @@ export default function Home() {
               alert("Tokens unstaked successfully!");
             }}
           >
-            Unstake!
+            Unstake
           </Web3Button>
 
           <Web3Button
@@ -123,30 +123,30 @@ export default function Home() {
               alert("Rewards claimed successfully!");
             }}
           >
-            Claim rewards!
+            Claim Rewards
           </Web3Button>
         </div>
 
         <div className={styles.grid}>
           <a className={styles.card}>
-            <h2>Stake token balance</h2>
+            <h2>Staked NFTE Tokens</h2>
             <p>{stakingTokenBalance?.displayValue}</p>
           </a>
 
           <a className={styles.card}>
-            <h2>Reward token balance</h2>
+            <h2>ARB Token Balance</h2>
             <p>{rewardTokenBalance?.displayValue}</p>
           </a>
 
           <a className={styles.card}>
-            <h2>Staked amount</h2>
+            <h2>Staked Amount</h2>
             <p>
               {stakeInfo && ethers.utils.formatEther(stakeInfo[0].toString())}
             </p>
           </a>
 
           <a className={styles.card}>
-            <h2>Current reward</h2>
+            <h2>Current ARB Reward</h2>
             <p>
               {stakeInfo && ethers.utils.formatEther(stakeInfo[1].toString())}
             </p>
